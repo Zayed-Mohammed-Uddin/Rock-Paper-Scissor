@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rock Paper Scissor</title>
+		<link rel="stylesheet" href="./dist/output.css" />
+	</head>
+	<body class="dark:bg-gray-900">
+		<section
+			class="hero_section flex items-center justify-center min-h-screen"
+		>
+			<div class="container">
+				<div class="game">
+					<div class="game_header text-center">
+						<h1
+							class="text-white text-4xl font-semibold tracking-wide mb-12"
+						>
+							<span class="text-red-600">Rock</span>
+							<span class="text-green-600">Paper</span>
+							<span class="text-blue-600">Scissor</span>
+						</h1>
+					</div>
+					<div
+						class="game_emojis flex items-center justify-center gap-x-16 mb-10"
+					>
+						<div
+							class="rock ring-4 ring-white rounded-full hover:ring-red-600 duration-300 cursor-pointer p-4"
+						>
+							<img
+								class="rock_img w-20 m-auto"
+								src="./images/emoji-2.png"
+								alt="Rock"
+							/>
+						</div>
+						<div
+							class="paper ring-4 ring-white rounded-full hover:ring-green-600 duration-300 cursor-pointer p-4"
+						>
+							<img
+								class="paper_img w-20 m-auto"
+								src="./images/emoji-1.png"
+								alt="Paper"
+							/>
+						</div>
+						<div
+							class="scissor ring-4 ring-white rounded-full hover:ring-blue-600 duration-300 cursor-pointer p-4"
+						>
+							<img
+								class="scissor_img w-20 m-auto"
+								src="./images/emoji-3.png"
+								alt="Scissor"
+							/>
+						</div>
+					</div>
+					<div class="game_results text-center text-white">
+						<h1 class="poppedText mb-3"></h1>
+						<div
+							class="popped_content flex items-center justify-center mb-5"
+						>
+							<span class="text_you"></span>
+						</div>
+						<p class="text-xl font-semibold mb-4">
+							Wins: <span class="number_of_wins">0</span>, Losses:
+							<span class="number_of_losses">0</span>, Ties:
+							<span class="number_of_ties">0</span>
+						</p>
+						<button
+							class="bg-green-700 px-4 py-3 rounded-full mb-4 hover:bg-blue-700 btn_reset shadow-lg hover:shadow-blue-500/50 duration-500"
+							type="reset"
+						>
+							Reset Score
+						</button>
+						<p>
+							Created By
+							<a
+								class="hover:underline"
+								href="https://zayed-mohammed-uddin.github.io/My-Portfolio/"
+								>Zayed</a
+							>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="./app.js"></script>
+	</body>
+</html>
