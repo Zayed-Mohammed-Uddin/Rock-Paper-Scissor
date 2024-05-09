@@ -1,5 +1,7 @@
 "use strict";
 
+// Elements
+
 const rockImage = document.querySelector(".rock_img");
 const paperImage = document.querySelector(".paper_img");
 const scissorImage = document.querySelector(".scissor_img");
@@ -7,19 +9,21 @@ const poppedContent = document.querySelector(".popped_content");
 const resetBtn = document.querySelector(".btn_reset");
 const autoPlayBtn = document.querySelector(".btn_autoplay");
 
+const spanPopUp = document.createElement("span");
+const displayImg = document.createElement("img");
+const duplicateImg = document.createElement("img");
+
 let num_of_wins = parseInt(document.querySelector(".number_of_wins").innerText);
 let num_of_losses = parseInt(
 	document.querySelector(".number_of_losses").innerText
 );
 let num_of_ties = parseInt(document.querySelector(".number_of_ties").innerText);
 
-const spanPopUp = document.createElement("span");
-const displayImg = document.createElement("img");
-const duplicateImg = document.createElement("img");
-
 let number_of_image = 0;
 let isAutoPlaying = false;
 let intervalID;
+
+// methods
 
 const displayResult = function (your_selection, number_of_image) {
 	displayImg.src = `./images/emoji-${your_selection}.png`;
@@ -33,6 +37,12 @@ const displayResult = function (your_selection, number_of_image) {
 	poppedContent.append(duplicateImg);
 	spanPopUp.innerText = `Computer`;
 	poppedContent.append(spanPopUp);
+};
+
+const resetTextContent = () => {
+	document.querySelector(".poppedText").innerText = ``;
+	document.querySelector(".text_you").innerText = ``;
+	spanPopUp.innerText = ``;
 };
 
 const winnerPopUp = (your_selection, number_of_image) => {
@@ -51,12 +61,6 @@ const tiePopUp = (your_selection, number_of_image) => {
 	resetTextContent();
 	document.querySelector(".poppedText").innerText = `You tied`.toUpperCase();
 	displayResult(your_selection, number_of_image);
-};
-
-const resetTextContent = () => {
-	document.querySelector(".poppedText").innerText = ``;
-	document.querySelector(".text_you").innerText = ``;
-	spanPopUp.innerText = ``;
 };
 
 const resetGame = () => {
@@ -143,10 +147,6 @@ const autoplay = function () {
 	initGame();
 };
 
-scissorImage.addEventListener("click", ScissorImage);
-rockImage.addEventListener("click", RockImage);
-paperImage.addEventListener("click", PaperImage);
-
 autoPlayBtn.addEventListener("click", function () {
 	if (!isAutoPlaying) {
 		autoPlayBtn.innerText = "Stop Auto Play";
@@ -159,4 +159,7 @@ autoPlayBtn.addEventListener("click", function () {
 	}
 });
 
+scissorImage.addEventListener("click", ScissorImage);
+rockImage.addEventListener("click", RockImage);
+paperImage.addEventListener("click", PaperImage);
 resetBtn.addEventListener("click", resetGame);
