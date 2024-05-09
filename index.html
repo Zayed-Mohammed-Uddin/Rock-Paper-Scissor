@@ -13,9 +13,55 @@
 	</head>
 	<body class="dark:bg-gray-900">
 		<section
-			class="hero_section flex items-center justify-center min-h-screen"
+			class="hero_section flex items-center justify-center min-h-screen relative"
 		>
 			<div class="container">
+				<div
+					class="modal_pop_up bg-red-600 text-white w-[35%] mx-auto rounded-lg p-5 absolute shadow-2xl left-[33%] top-[23%] shadow-red-600/60 hover:shadow-green-600/60 hover:bg-green-600 hover:text-black duration-300 hide"
+				>
+					<div class="modal_header mb-4 text-center">
+						<h1
+							class="text-2xl text-white font-semibold uppercase tracking-wide"
+						>
+							Game Instructions
+						</h1>
+					</div>
+					<hr />
+					<div class="modal_body px-5 py-3">
+						<ul class="leading-7 list-decimal">
+							<li>
+								You can play the game by pressing the keys ['r'
+								=== 'rock' or 'p' === 'paper' or 's' ===
+								'scissor'.
+							</li>
+							<li>
+								You can also play the game by clicking the image
+								of your selection.
+							</li>
+							<li>
+								You can hit the autoplay button to let the game
+								run on its own
+							</li>
+							<li>
+								You can hit the reset button to reset the game.
+							</li>
+							<li>
+								You can visit my github profile for more
+								exciting projects.
+							</li>
+						</ul>
+					</div>
+					<div class="modal_footer">
+						<center>
+							<button
+								class="bg-green-700 px-7 py-3 rounded-full mb-4 me-4 hover:bg-red-700 btn_close shadow-lg hover:shadow-red-500/50 duration-500 text-white"
+								type="reset"
+							>
+								Close
+							</button>
+						</center>
+					</div>
+				</div>
 				<div class="game">
 					<div class="game_header text-center">
 						<h1

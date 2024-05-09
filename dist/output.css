@@ -609,8 +609,33 @@ body {
   font-weight: bold;
 }
 
+.hide{
+  display: none;
+}
+
+.absolute{
+  position: absolute;
+}
+
+.relative{
+  position: relative;
+}
+
+.left-\[33\%\]{
+  left: 33%;
+}
+
+.top-\[23\%\]{
+  top: 23%;
+}
+
 .m-auto{
   margin: auto;
+}
+
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mb-10{
@@ -649,8 +674,16 @@ body {
   width: 5rem;
 }
 
+.w-\[35\%\]{
+  width: 35%;
+}
+
 .cursor-pointer{
   cursor: pointer;
+}
+
+.list-decimal{
+  list-style-type: decimal;
 }
 
 .items-center{
@@ -670,6 +703,10 @@ body {
   border-radius: 9999px;
 }
 
+.rounded-lg{
+  border-radius: 0.5rem;
+}
+
 .bg-blue-700{
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
@@ -680,18 +717,32 @@ body {
   background-color: rgb(21 128 61 / var(--tw-bg-opacity));
 }
 
-.bg-teal-700{
+.bg-red-600{
   --tw-bg-opacity: 1;
-  background-color: rgb(15 118 110 / var(--tw-bg-opacity));
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
 .p-4{
   padding: 1rem;
 }
 
+.p-5{
+  padding: 1.25rem;
+}
+
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.px-7{
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
 }
 
 .py-3{
@@ -701,6 +752,11 @@ body {
 
 .text-center{
   text-align: center;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-4xl{
@@ -715,6 +771,14 @@ body {
 
 .font-semibold{
   font-weight: 600;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.leading-7{
+  line-height: 1.75rem;
 }
 
 .tracking-wide{
@@ -741,10 +805,21 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.shadow-2xl{
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-lg{
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-red-600\/60{
+  --tw-shadow-color: rgb(220 38 38 / 0.6);
+  --tw-shadow: var(--tw-shadow-colored);
 }
 
 .ring-4{
@@ -771,14 +846,24 @@ body {
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-green-700:hover{
+.hover\:bg-green-600:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-lime-700:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(77 124 15 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-red-700:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+}
+
+.hover\:text-black:hover{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover{
@@ -787,6 +872,16 @@ body {
 
 .hover\:shadow-blue-500\/50:hover{
   --tw-shadow-color: rgb(59 130 246 / 0.5);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.hover\:shadow-green-600\/60:hover{
+  --tw-shadow-color: rgb(22 163 74 / 0.6);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.hover\:shadow-red-500\/50:hover{
+  --tw-shadow-color: rgb(239 68 68 / 0.5);
   --tw-shadow: var(--tw-shadow-colored);
 }
 

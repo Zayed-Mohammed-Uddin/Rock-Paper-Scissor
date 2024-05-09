@@ -22,4 +22,7 @@
         font-size: 25px;
         font-weight: bold;
     }
+	.hide{
+		@apply hidden;
+	}
 }

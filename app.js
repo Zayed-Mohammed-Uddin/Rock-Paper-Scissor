@@ -8,6 +8,8 @@ const scissorImage = document.querySelector(".scissor_img");
 const poppedContent = document.querySelector(".popped_content");
 const resetBtn = document.querySelector(".btn_reset");
 const autoPlayBtn = document.querySelector(".btn_autoplay");
+const modal = document.querySelector(".modal_pop_up");
+const closeBtn = document.querySelector(".btn_close");
 
 const spanPopUp = document.createElement("span");
 const displayImg = document.createElement("img");
@@ -24,6 +26,14 @@ let isAutoPlaying = false;
 let intervalID;
 
 // methods
+
+setTimeout(function () {
+	modal.classList.remove("hide");
+}, 700);
+
+closeBtn.addEventListener("click", function () {
+	modal.classList.add("hide");
+});
 
 const displayResult = function (your_selection, number_of_image) {
 	displayImg.src = `./images/emoji-${your_selection}.png`;
@@ -79,6 +89,8 @@ const resetGame = () => {
 };
 
 const RockImage = function (your_selection) {
+	console.log(your_selection);
+
 	number_of_image = Math.trunc(Math.random() * 3) + 1;
 
 	if (number_of_image == 2) {
@@ -97,6 +109,8 @@ const RockImage = function (your_selection) {
 };
 
 const PaperImage = function (your_selection) {
+	console.log(your_selection);
+
 	number_of_image = Math.trunc(Math.random() * 3) + 1;
 
 	if (number_of_image == 1) {
@@ -159,7 +173,17 @@ autoPlayBtn.addEventListener("click", function () {
 	}
 });
 
-scissorImage.addEventListener("click", ScissorImage);
-rockImage.addEventListener("click", RockImage);
-paperImage.addEventListener("click", PaperImage);
+document.body.addEventListener("keydown", (event) => {
+	if (event.key === "r" || event.key === "R") {
+		RockImage(2);
+	} else if (event.key === "p" || event.key === "P") {
+		PaperImage(1);
+	} else if (event.key === "s" || event.key === "S") {
+		ScissorImage(3);
+	}
+});
+
+scissorImage.addEventListener("click", ScissorImage.bind(null, 3));
+rockImage.addEventListener("click", RockImage.bind(null, 2));
+paperImage.addEventListener("click", PaperImage.bind(null, 1));
 resetBtn.addEventListener("click", resetGame);
